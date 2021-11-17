@@ -1,0 +1,55 @@
+// ========== variables ==========
+
+// ------ Colors ------
+
+$color-one: #f3f3f3;
+$color_three: #12602d;
+$color_four: #043114;
+
+@mixin displayFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    @include displayFlex();
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 13%;
+
+    h1 {
+        text-transform: uppercase;
+        color: $color_four;
+        margin-bottom: 65px;
+    }
+
+    .cards {
+        display: flex;
+        column-gap: 30px;
+
+        .main_section {
+            @include displayFlex();
+            flex-direction: column;
+
+            padding: 15px;
+            background-color: $color-one;
+
+            text-align: center;
+            border-radius: 10px;
+
+            img {
+                width: 150px;
+                margin-bottom: 10px;
+            }
+
+            h2 {
+                color: $color_three;
+            }
+
+            p {
+                color: $color_four;
+            }
+        }
+    }
+}

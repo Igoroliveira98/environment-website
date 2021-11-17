@@ -1,0 +1,59 @@
+// ========== variables ==========
+
+// ------ Colors ------
+
+$color-one: #f3f3f3;
+$color_three: #12602d;
+$color_four: #043114;
+
+.section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15%;
+    padding: 20px;
+
+    .section_images {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+
+        .image_overlay {
+            overflow: hidden;
+
+            .img-one {
+                width: 360px;
+                cursor: pointer;
+            }
+
+            .img-two {
+                width: 400px;
+                cursor: pointer;
+            }
+
+            .img-one,
+            .img-two {
+                transition: .3s;
+            }
+
+            .img-one:hover,
+            .img-two:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+
+    .section-description {
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            color: $color_four;
+            font-size: 2rem;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            
+        }
+    }
+}

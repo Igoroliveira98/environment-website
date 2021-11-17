@@ -1,0 +1,105 @@
+// ========== Variables ==========
+
+$color-one: #ffffff;
+$color-two: rgba(10, 15, 11,0.5);
+$color_three: #12602d;
+$color_four: #043114;
+
+
+//  ========== Mixin ==========
+
+
+@mixin button {
+        color: $color_one;
+        border: 1px solid $color_one;
+        border-radius: 10px;
+
+        padding: 10px;
+        
+        font-size: 20px;
+
+        transition: 0.4s;
+
+        text-align: center;
+
+        &:hover {
+            background-color: $color_one;
+            color: $color_four;
+
+            transition: 0.4s;
+        }
+}
+
+
+// ============================
+
+.form_div {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .form_div--image {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70vh;
+            object-fit: cover;
+        }
+    }
+
+    .form_div-form {
+        background-color: $color_three;
+        height: 70vh;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        form {
+            h1 {
+                text-transform: uppercase;
+                color: $color_one;
+                margin-bottom: 10px;
+                text-align: center;
+            }
+
+            .form_fields {
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+
+                .form_div--contactForm {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+
+                    label {
+                        color: $color_one;
+                    }
+
+                    input {
+                        border: none;
+                        border: 1px solid $color-three;
+                        border-color: $color-one;
+                        border-radius: 10px;
+
+                        padding: 10px;
+
+                    }
+                }
+
+                a {
+                    @include button;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,103 @@
+// ========== variables ==========
+
+// ---- Fonts ----
+
+$font-one: 'Indie Flower', cursive;
+
+// ------ Colors ------
+
+$color_three: #12602d;
+$color_four: #043114;
+
+// ========== Header ==========
+
+.header {
+    nav {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        justify-content: space-between;
+        font-size: 1.2rem;
+
+        h1 {
+            font-family: $font-one;
+            color: $color_three;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+
+            li {
+                margin: 10px;
+            }
+
+            a {
+                color: $color_three;
+
+                &:hover {
+                    color: $color_four;
+                    border-bottom: 2px solid $color_four;
+                }
+            }
+        }
+    }
+
+    .main-header {
+        height: 100vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        column-gap: 15px;
+
+        img {
+            width: 70%;
+        }
+
+        .main-header--text {
+            h1 {
+                text-transform: uppercase;
+                font-size: 2.1rem;
+                color: $color_three;
+            }
+
+            h3 {
+                color: $color_three;
+                font-size: 1.7rem;
+                font-weight: 500;
+                margin-bottom: 20px;
+            }
+
+            a {
+                color: $color_three;
+                border: 2px solid $color_three;
+                border-radius: 10px;
+
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                
+                width: 70%;
+                padding: 15px;
+                
+                font-size: 20px;
+
+                transition: 0.4s;
+
+                i {
+                    font-size: 30px;
+                }
+
+                &:hover {
+                    background-color: $color_three;
+                    color: #fff;
+
+                    transition: 0.4s;
+                }
+            }
+        }
+    }
+}
